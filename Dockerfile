@@ -50,7 +50,7 @@ COPY . .
 # Even if deleted in a later layer, the secret persists in the
 # intermediate layer and can be extracted with: docker image history
 # VULN: .env file copied into the image — credentials baked into layers
-COPY chatapp/backend/.env ./chatapp/backend/.env
+COPY backend/.env ./chatapp/backend/.env
 COPY key.txt ./chatapp/key.txt
 
 # CASE 6 — Sensitive admin tool included in image
