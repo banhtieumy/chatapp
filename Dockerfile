@@ -10,8 +10,7 @@
 # Trivy check: Known CVEs in node:16 image
 #   e.g. CVE-2023-30581, CVE-2023-38552, CVE-2023-39331 etc.
 # Correct: Use node:lts-alpine or node:22-alpine
-
-FROM node:16
+FROM node:18-bullseye
 
 # VULN: Not running as non-root (no USER directive until CMD)
 # Trivy check: AVD-DS-0002 "Specify at least 1 USER command in Dockerfile"
