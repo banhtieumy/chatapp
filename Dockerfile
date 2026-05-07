@@ -51,7 +51,7 @@ COPY . .
 # intermediate layer and can be extracted with: docker image history
 # VULN: .env file copied into the image — credentials baked into layers
 COPY chatapp/backend/.env ./chatapp/backend/.env
-COPY chatapp/key.txt ./chatapp/key.txt
+COPY key.txt ./chatapp/key.txt
 
 # CASE 6 — Sensitive admin tool included in image
 # VULN: mongodump/mongoexport included — enables bulk data extraction
